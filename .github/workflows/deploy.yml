@@ -39,4 +39,5 @@ jobs:
           path: release
 
       - name: Mensaje final
-        run: echo "Deploy simulado completado para la versión estable."
+        run: |
+          echo "Deploy simulado completado para la versión estable."

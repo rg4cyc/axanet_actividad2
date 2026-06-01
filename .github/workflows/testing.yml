@@ -29,4 +29,5 @@ jobs:
         run: python -m pytest -v
 
       - name: Mensaje de negocio validado
-        run: echo "Validación completada: creación, consulta, actualización y eliminación de clientes."
+        run: |
+          echo "Validación completada: creación, consulta, actualización y eliminación de clientes."
