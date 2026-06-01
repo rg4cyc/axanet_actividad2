@@ -92,3 +92,16 @@ La aplicación implementa las operaciones básicas de gestión de clientes:
 - DELETE: permite eliminar un cliente del archivo JSON de persistencia.
 
 Estas operaciones se concentran en `src/gestor.py`, mientras que `src/app.py` funciona como interfaz de línea de comandos.
+
+## Validaciones de entrada
+
+El sistema valida datos antes de crear o actualizar clientes:
+
+- Nombre obligatorio.
+- RFC con formato válido.
+- Correo electrónico con estructura válida.
+- Teléfono de 10 dígitos.
+- Dirección obligatoria.
+- Servicio inicial obligatorio al crear cliente.
+
+Estas validaciones ayudan a evitar registros incompletos o inconsistentes. También se incluyen pruebas automatizadas en `tests/test_cliente.py` para confirmar que los datos inválidos sean rechazados correctamente.
