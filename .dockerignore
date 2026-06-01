@@ -1,0 +1,21 @@
+# Git
+.git/
+.gitignore
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# Data and secrets
+data/
+.env
+*.pem
+*.key
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store

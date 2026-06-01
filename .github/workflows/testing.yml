@@ -1,0 +1,24 @@
+name: Testing AXANET
+
+on:
+  push:
+    branches: [develop, main]
+  pull_request:
+    branches: [develop, main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+      - name: Ejecutar pytest
+        run: pytest -v
+      - name: Mensaje de negocio validado
+        run: echo "Validación completada: creación, consulta, actualización y eliminación de clientes."
