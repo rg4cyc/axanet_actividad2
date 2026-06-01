@@ -81,3 +81,14 @@ docker run -it --rm axanet-clientes:1.0
 - `testing.yml`: ejecuta pruebas con pytest.
 - `lint.yml`: valida estilo con flake8.
 - `deploy.yml`: simula despliegue y genera artifact.
+
+## Operaciones CRUD implementadas
+
+La aplicación implementa las operaciones básicas de gestión de clientes:
+
+- CREATE: permite crear un nuevo cliente con nombre, RFC, correo, teléfono, dirección y servicio inicial.
+- READ: permite listar todos los clientes, buscar por nombre y visualizar un cliente por ID.
+- UPDATE: permite actualizar datos de un cliente existente y agregar servicios recurrentes.
+- DELETE: permite eliminar un cliente del archivo JSON de persistencia.
+
+Estas operaciones se concentran en `src/gestor.py`, mientras que `src/app.py` funciona como interfaz de línea de comandos.
